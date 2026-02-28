@@ -211,9 +211,8 @@
     footer .footer-links { flex-direction:column; gap:10px; }
   }
 </style>
-</head>
-<body>
 
+  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBP9SCXJ2H"></script>
 <script>
@@ -223,6 +222,40 @@
 
   gtag('config', 'G-XBP9SCXJ2H');
 </script>
+    <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #1a2e4a;
+      color: rgba(255,255,255,0.88);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+    #cookie-banner p { margin: 0; line-height: 1.5; }
+    #cookie-banner a { color: #fe745c; }
+    .cookie-btn {
+      padding: 8px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .cookie-accept { background: #fe745c; color: #fff; }
+    .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); }
+    .cookie-decline:hover { color: #fff; }
+  </style>
+  
+</head>
+<body>
   
 <!-- HERO -->
 <section class="hero">
