@@ -254,7 +254,15 @@
   </style>
 </head>
 <body>
-  
+<div id="cookie-banner">
+  <p>Diese Website verwendet Cookies, um die Nutzererfahrung zu verbessern. 
+  Mehr dazu in unserer <a href="Datenschutz.html">Datenschutzerklärung</a>.</p>
+  <div style="display:flex; gap:10px; flex-shrink:0;">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Akzeptieren</button>
+    <button class="cookie-btn cookie-decline" onclick="declineCookies()">Ablehnen</button>
+  </div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <p class="hero-badge">WINTERFEST Leadership Academy</p>
@@ -688,6 +696,23 @@
     <a href="agb.html">AGB</a>
   </div>
 </footer>
+<script>
+  (function() {
+    if (localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  })();
+
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
